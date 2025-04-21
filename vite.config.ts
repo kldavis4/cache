@@ -72,6 +72,11 @@ export default defineConfig(async (config: ConfigEnv) => {
           destination: "crash",
           cache: true,
         }),
+        await getServerlessEndpoint({
+          file: "graphql.ts",
+          destination: "error",
+          cache: true,
+        }),
       ],
     },
   };
